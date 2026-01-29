@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genesis 2k26 | ETX Dept ISF</title>
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===== INTERNAL CSS ===== -->
+  <style>
+    :root{
+      --primary:#6a00ff;
+      --secondary:#00e5ff;
+      --dark:#0b0b0f;
+      --light:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:linear-gradient(120deg,var(--dark),#12002b);
+      color:var(--light);
+      min-height:100vh;
+    }
+
+    header{
+      text-align:center;
+      padding:60px 20px 40px;
+    }
+
+    header h1{
+      font-size:3rem;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    header h1 span{
+      color:var(--secondary);
+    }
+
+    header p{
+      margin-top:12px;
+      opacity:0.9;
+      font-size:1.1rem;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border-radius:18px;
+      padding:30px;
+      text-align:center;
+      transition:transform .3s, box-shadow .3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2{
+      margin-bottom:10px;
+      font-size:1.4rem;
+    }
+
+    .card p{
+      font-size:0.95rem;
+      opacity:0.85;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 26px;
+      border-radius:50px;
+      background:linear-gradient(45deg,var(--primary),var(--secondary));
+      color:#000;
+      text-decoration:none;
+      font-weight:600;
+      transition:opacity .3s, transform .3s;
+    }
+
+    .btn:hover{
+      opacity:0.85;
+      transform:scale(1.05);
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 10px 40px;
+      font-size:0.85rem;
+      opacity:0.7;
+    }
+
+    /* ===== ANIMATION ===== */
+    .fade{
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 1s forwards;
+    }
+
+    @keyframes fadeUp{
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav style="display:flex;justify-content:space-between;align-items:center;padding:20px 40px;position:sticky;top:0;background:rgba(11,11,15,0.85);backdrop-filter:blur(10px);z-index:1000;">
+    <h2 style="letter-spacing:2px;">GENESIS <span style="color:var(--secondary)">2K26</span></h2>
+    <div style="display:flex;gap:25px;">
+      <a href="#" onclick="showHome()" style="color:white;text-decoration:none;font-weight:500;">Home</a>
+      <a href="#" onclick="showEvents()" style="color:white;text-decoration:none;font-weight:500;">Events</a>
+    </div>
+  </nav>
+
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home" style="min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;">
+    <h1 style="font-size:3.2rem;font-weight:700;">Welcome to <span style="color:var(--secondary)">Genesis 2K26</span></h1>
+    <p style="max-width:700px;margin-top:20px;opacity:0.85;font-size:1.1rem;">
+      A grand technical & cultural fest organized by ETX Department ISF Committee. 
+      Innovation, creativity, competition & fun — all at one place.
+    </p>
+    <button onclick="showEvents()" class="btn" style="margin-top:30px;">Explore Events</button>
+  </section>
+
+  <!-- ===== EVENTS SECTION ===== -->
+  <section id="events" style="display:none;">
+
+    <header class="fade">
+      <h1>EVENTS</h1>
+      <p>Choose your arena and register now</p>
+    </header>
+
+    <section class="container">
+
+      <div class="card fade" style="animation-delay:.1s">
+        <h2>CIRCUIT CRAZE</h2>
+        <p>Electronics & circuit-based challenges to test your technical skills</p>
+        <a href="https://forms.gle/HUmqzg8tkCt8ax6Z6" target="_blank" class="btn">Register</a>
+      </div>
+
+      <div class="card fade" style="animation-delay:.2s">
+        <h2>CAMPUS EXPERIA</h2>
+        <p>Explore fun, creativity, and interactive campus-based activities</p>
+        <a href="https://forms.gle/EnSm6Te1TK5KS1Xs6" target="_blank" class="btn">Register</a>
+      </div>
+
+      <div class="card fade" style="animation-delay:.3s">
+        <h2>SHARK TANK</h2>
+        <p>Pitch your innovative ideas and compete like real entrepreneurs</p>
+        <a href="https://forms.gle/wTx3mMheNPuzY7J96" target="_blank" class="btn">Register</a>
+      </div>
+
+      <div class="card fade" style="animation-delay:.4s">
+        <h2>CINEQUEST</h2>
+        <p>Film, media, and creative storytelling challenges</p>
+        <a href="https://forms.gle/dRVpdXTJd7ZXGR9G9" target="_blank" class="btn">Register</a>
+      </div>
+
+      <div class="card fade" style="animation-delay:.5s">
+        <h2>IQ ARENA</h2>
+        <p>Mind-bending quizzes and logic-based competitions</p>
+        <a href="https://forms.gle/K7rcTbhz59xjG8dU9" target="_blank" class="btn">Register</a>
+      </div>
+
+      <div class="card fade" style="animation-delay:.6s">
+        <h2>RESPAWN</h2>
+        <p>Gaming zone featuring competitive and fun esports events</p>
+        <a href="https://forms.gle/1t4NmKbvTVasMMzU7" target="_blank" class="btn">Register</a>
+      </div>
+
+    </section>
+  </section>
+
+  <footer>
+    © 2026 ETX Department | Genesis 2k26 | Designed by ISF Committee
+  </footer>
+
+  <!-- ===== INTERNAL JAVASCRIPT ===== -->
+  <script>
+    function showEvents(){
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('events').style.display = 'block';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    function showHome(){
+      document.getElementById('events').style.display = 'none';
+      document.getElementById('home').style.display = 'flex';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    console.log('Genesis 2k26 interactive site loaded');
+  </script>
+
+</body>
+</html>
